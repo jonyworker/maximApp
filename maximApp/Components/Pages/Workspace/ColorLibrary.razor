@@ -1,0 +1,20 @@
+﻿@page "/workspace/color-library"
+@layout maximApp.Components.Layout.ControlCenterLayout
+
+<div class="h-full bg-amber-500">
+    <h1 class="bg-amber-500">colorLibrary</h1>
+
+    <p role="status">Current count: @currentCount</p>
+
+    <button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+</div>
+
+
+@code {
+    private int currentCount = 0;
+
+    private void IncrementCount()
+    {
+        currentCount++;
+    }
+}

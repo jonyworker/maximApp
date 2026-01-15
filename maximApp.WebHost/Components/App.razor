@@ -1,0 +1,23 @@
+﻿@using maximApp.SharedUI.Components
+
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <base href="/" />
+
+    <!-- SharedUI Tailwind -->
+    <link rel="stylesheet" href="/_content/maximApp.SharedUI/css/app.css" />
+
+    <!-- (可選) WebHost 自己的 CSS，如果你想保留 -->
+    @* <link rel="stylesheet" href="/app.css" /> *@
+
+    <HeadOutlet />
+</head>
+<body>
+    <SharedApp @rendermode="InteractiveServer" />
+
+    <script src="_framework/blazor.web.js"></script>
+</body>
+</html>

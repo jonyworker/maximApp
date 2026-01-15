@@ -1,0 +1,38 @@
+# =========================
+# Visual Studio / .NET
+# =========================
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Build output
+**/bin/
+**/obj/
+
+# =========================
+# MAUI
+# =========================
+.platforms/
+.platforms/**
+
+# =========================
+# Node / npm
+# =========================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# =========================
+# Tailwind / Frontend build artifacts
+# =========================
+maximApp.SharedUI/wwwroot/css/app.css
+
+# =========================
+# OS / Editor noise
+# =========================
+.DS_Store
+Thumbs.db

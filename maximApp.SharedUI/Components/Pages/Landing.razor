@@ -1,0 +1,39 @@
+﻿@page "/"
+@page "/landing"
+@inject NavigationManager Nav
+
+@code {
+    protected override void OnInitialized()
+    {
+        // 首頁固定導到你的主要工作區
+        Nav.NavigateTo("/workspace/label-engine", replace: true);
+    }
+}
+
+@* @page "/"
+@inject NavigationManager Nav
+
+@code {
+    private bool _redirected;
+
+    protected override void OnAfterRender(bool firstRender)
+    {
+        if (firstRender && !_redirected)
+        {
+            _redirected = true;
+            Nav.NavigateTo("/workspace/label-engine", replace: true);
+        }
+    }
+} *@
+
+@* @page "/"
+
+<PageTitle>SharedUI Landing</PageTitle>
+
+<div class="p-10 text-3xl font-bold underline bg-yellow-200 rounded">
+    ✅ SharedUI Landing 有被載入（不是 WebHost / 不是 MAUI Host）
+</div>
+
+<p class="mt-4 text-sm opacity-70">
+    現在時間：@DateTime.Now.ToString("HH:mm:ss")
+</p> *@

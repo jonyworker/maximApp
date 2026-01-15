@@ -1,0 +1,22 @@
+﻿@page "/workspace/color-library"
+@layout ControlCenterLayout
+
+@inject NavigationManager Nav
+
+<div class="h-full bg-amber-500">
+    <h1 class="bg-amber-500">colorLibrary</h1>
+
+    <div class="p-10 text-4xl font-bold underline bg-green-200 rounded-4xl">
+        ✅ SharedUI Landing 有被載入（不是 WebHost / 不是 MAUI Host）
+    </div>
+
+    
+</div>
+
+<NavLink href="/probe"
+         class="inline-block px-4 py-2 rounded bg-blue-400"
+         ActiveClass="bg-blue-700 text-white"
+         Match="NavLinkMatch.Prefix">
+    前往 /probe
+</NavLink>
+

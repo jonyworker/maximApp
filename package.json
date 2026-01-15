@@ -1,0 +1,26 @@
+{
+  "name": "maximapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "web:run": "dotnet run --project maximApp.WebHost",
+    "tw:watch": "npx @tailwindcss/cli -i ./tailwind.css -o ./maximApp.SharedUI/wwwroot/css/app.css --watch",
+    "web:watch": "dotnet watch --project maximApp.WebHost",
+    "dev": "concurrently \"npm run tw:watch\" \"npm run web:watch\"",
+    "tw:build": "npx @tailwindcss/cli -i ./tailwind.css -o ./maximApp.SharedUI/wwwroot/css/app.css",
+    "tw:build:min": "npx @tailwindcss/cli -i ./tailwind.css -o ./maximApp.SharedUI/wwwroot/css/app.css --minify"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.18",
+    "tailwindcss": "^4.1.18"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}

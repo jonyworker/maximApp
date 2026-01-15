@@ -1,0 +1,17 @@
+﻿@using maximApp.SharedUI
+@using maximApp.SharedUI.Components.Layout
+
+<Router AppAssembly="typeof(Program).Assembly"
+        AdditionalAssemblies="@(new[] { typeof(maximApp.SharedUI._Imports).Assembly })"
+>
+    <Found Context="routeData">
+        <RouteView RouteData="routeData" DefaultLayout="typeof(AppLayout)" />
+        <FocusOnNavigate RouteData="routeData" Selector="h1" />
+    </Found>
+
+    <NotFound>
+        <LayoutView Layout="typeof(AppLayout)">
+            <p>Not found</p>
+        </LayoutView>
+    </NotFound>
+</Router>

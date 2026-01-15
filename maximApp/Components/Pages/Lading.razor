@@ -1,0 +1,20 @@
+﻿@* @page "/__maui-landing"
+@inject NavigationManager Nav
+
+@code {
+    private bool _redirected;
+
+    protected override void OnAfterRender(bool firstRender)
+    {
+        if (firstRender && !_redirected)
+        {
+            _redirected = true;
+            Nav.NavigateTo("/workspace/label-engine", replace: true);
+        }
+    }
+} *@
+
+@page "/"
+@inject NavigationManager Nav
+
+<h1>MAUI 的"/"頁面</h1>

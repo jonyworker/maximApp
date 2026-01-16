@@ -1,0 +1,15 @@
+@namespace maximApp.SharedUI.Components.Layouts.ControlCenter
+@layout maximApp.SharedUI.Components.Shell.AppShell
+@inherits LayoutComponentBase
+
+<div class="h-full grid grid-cols-[260px_1fr]">
+  <!-- PrimaryNav -->
+  <aside class="h-full border-r bg-white">
+    <PrimaryNav />
+  </aside>
+
+  <!-- Content Host -->
+  <main class="h-full overflow-auto p-4">
+    @Body
+  </main>
+</div>

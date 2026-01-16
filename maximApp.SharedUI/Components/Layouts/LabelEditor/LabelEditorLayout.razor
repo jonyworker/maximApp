@@ -1,0 +1,24 @@
+@inherits LayoutComponentBase
+@layout maximApp.SharedUI.Components.Shell.AppShell
+
+<div class="h-full grid grid-rows-[56px_1fr]">
+  <!-- Header -->
+  <div class="border-b bg-white">
+    <EditorHeader />
+  </div>
+
+  <!-- Editor Body -->
+  <div class="min-h-0 grid grid-cols-[280px_1fr_360px]">
+    <aside class="min-h-0 border-r bg-white overflow-auto">
+      <EditorLeftPanel />
+    </aside>
+
+    <section class="min-h-0 bg-slate-100 overflow-hidden">
+      <EditorCanvas />
+    </section>
+
+    <aside class="min-h-0 border-l bg-white overflow-auto">
+      <EditorRightPanel />
+    </aside>
+  </div>
+</div>

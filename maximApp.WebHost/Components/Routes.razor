@@ -1,16 +1,15 @@
-﻿@using maximApp.SharedUI
-@using maximApp.SharedUI.Components.Layout
+﻿@using maximApp.SharedUI.Components.Shell
 
 <Router AppAssembly="typeof(Program).Assembly"
         AdditionalAssemblies="@(new[] { typeof(maximApp.SharedUI._Imports).Assembly })"
 >
     <Found Context="routeData">
-        <RouteView RouteData="routeData" DefaultLayout="typeof(AppLayout)" />
+        <RouteView RouteData="routeData" DefaultLayout="typeof(AppShell)" />
         <FocusOnNavigate RouteData="routeData" Selector="h1" />
     </Found>
 
     <NotFound>
-        <LayoutView Layout="typeof(AppLayout)">
+        <LayoutView Layout="typeof(AppShell)">
             <p>Not found</p>
         </LayoutView>
     </NotFound>

@@ -1,0 +1,33 @@
+@namespace maximApp.SharedUI.Components.Shell.TabsBar
+
+<div class="w-full h-full flex items-center gap-2 px-2 bg-white">
+  <!-- TabsBar - 商標 ( to: ControlCenter ) -->
+  <div class="flex items-center gap-2 px-2 shrink-0">
+     <a href="/" class="min-w-0 flex-1 truncate">
+       MAXIM
+     </a>
+  </div>
+
+  <!-- TabsBar - Tabs -->
+  <div class="flex-1 min-w-0 flex items-center gap-1 overflow-x-auto">
+
+    <!--  TabItem -->
+    <div class="h-9 min-w-[160px] max-w-[260px] px-2 rounded border bg-white border-slate-200 hover:bg-slate-50 flex items-center gap-2 text-sm">
+      <a href="/editor/123" class="min-w-0 flex-1 truncate">
+        Generic RFID HangTag
+      </a>
+      <button type="button" class="px-1 rounded hover:bg-slate-200" title="關閉">
+        ✕
+      </button>
+    </div>
+
+    <!--  TabsBar - Creat New Label Engine Page Button -->
+    <button type="button" class="px-1 rounded hover:bg-slate-200" title="關閉">
+      +
+    </button>
+
+  </div>
+
+</div>
+
+

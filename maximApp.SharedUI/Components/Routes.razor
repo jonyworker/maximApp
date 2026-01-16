@@ -2,10 +2,13 @@
 
 <Router AppAssembly="@typeof(Routes).Assembly">
     <Found Context="routeData">
-        <RouteView RouteData="@routeData" />
+        <RouteView RouteData="@routeData"
+                   DefaultLayout="@typeof(AppShell)" />
     </Found>
 
     <NotFound>
-        <p class="p-6">找不到頁面</p>
+        <LayoutView Layout="@typeof(AppShell)">
+            <p class="p-6">找不到頁面</p>
+        </LayoutView>
     </NotFound>
 </Router>

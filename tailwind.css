@@ -1,1 +1,8 @@
 @import "tailwindcss";
+@import "./maximApp.SharedUI/wwwroot/css/fonts.css";
+
+@layer base {
+    html {
+        font-family: "Noto Sans TC", ui-sans-serif, system-ui, sans-serif;
+    }
+}

@@ -1,4 +1,14 @@
 @page "/"
-@layout maximApp.SharedUI.Components.Layouts.ControlCenter.ControlCenterLayout
+@page "/controlCenter"
+@inject NavigationManager Nav
 
-<h1 class="text-xl font-semibold">Control Center Home.razor</h1>
+@code {
+    protected override void OnAfterRender(bool firstRender)
+    {
+        if (!firstRender) return;
+
+        // ✅ 先固定導到預設 Home 子頁
+        Nav.NavigateTo("/label-engine", replace: true);
+    }
+}
+

@@ -7,4 +7,11 @@ export default {
         "./maximApp.WebHost/**/*.razor",
         "./maximApp.WebHost/**/*.cshtml",
     ],
+    theme: {
+        extend: {
+            data: {
+                active: 'active="true"', // 讓 data-active 變為可選用的狀態
+            },
+        },
+    }
 };

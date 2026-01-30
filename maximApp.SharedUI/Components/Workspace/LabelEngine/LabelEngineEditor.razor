@@ -1,0 +1,9 @@
+@page "/draft-editor/{id:int}"
+@* @layout maximApp.SharedUI.Components.Layouts.LabelEditor.LabelEditorLayout *@
+
+<h1 class="text-lg font-semibold">Draft Editor @Id</h1>
+
+
+@code {
+    [Parameter] public int Id { get; set; }
+}

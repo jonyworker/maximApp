@@ -1,33 +1,88 @@
 @namespace maximApp.SharedUI.Components.Shell.TabsBar
+@using maximApp.SharedUI.Components.Icons
+@using maximApp.SharedUI.Components.Branding
+@inject NavigationManager Nav
 
-<div class="w-full h-full flex items-center gap-2 px-2 bg-white">
-  <!-- TabsBar - 商標 ( to: ControlCenter ) -->
-  <div class="flex items-center gap-2 px-2 shrink-0">
-     <a href="/" class="min-w-0 flex-1 truncate">
-       MAXIM
-     </a>
-  </div>
+<div class="w-full h-full flex items-center">
+<!-- TabsBar - 商標 ( to: ControlCenter ) -->
+<button type="button"
+        data-active="@(activeTabId == null ? "true" : "false")"
+        class="flex items-center border-r border-zinc-300 hover:bg-zinc-200 data-[active=true]:bg-white data-[active=true]:hover:bg-white h-full px-4" 
+        @onclick="OnHomeClick">
+    <div class="h-[18.67px] w-auto">
+        <MaximLogo />
+    </div>
+    
+</button>
 
-  <!-- TabsBar - Tabs -->
-  <div class="flex-1 min-w-0 flex items-center gap-1 overflow-x-auto">
-
-    <!--  TabItem -->
-    <div class="h-9 min-w-[160px] max-w-[260px] px-2 rounded border bg-white border-slate-200 hover:bg-slate-50 flex items-center gap-2 text-sm">
-      <a href="/editor/123" class="min-w-0 flex-1 truncate">
-        Generic RFID HangTag
-      </a>
-      <button type="button" class="px-1 rounded hover:bg-slate-200" title="關閉">
-        ✕
-      </button>
+<!-- TabsBar - Tabs ( 可累加 ) -->
+<div class="flex-1 flex items-center h-full text-gray-400">
+    <!-- 草稿編輯畫面 TAB -->
+    <div data-active="@(activeTabId == 1 ? "true" : "false")" @onclick="() => OnTabClick(1, 123)"
+        class="min-w-[50px] max-w-[200px] px-2 border-r border-zinc-300 h-full group hover:bg-zinc-200 data-[active=true]:bg-white data-[active=true]:hover:bg-white">
+        <div class="flex items-center gap-1 h-full">
+            <div class="flex items-center gap-1 min-w-0 flex-1">
+                <div class="w-5 h-5 [--icon-stroke:1.25] group-hover:text-sky-500 group-data-[active=true]:text-sky-500">
+                    <PenToolIcon />
+                </div>
+                <p class="text-xs min-w-0 flex-1 truncate group-hover:text-zinc-900 group-data-[active=true]:text-zinc-900">H&M_Little Kids' Graphic Tee</p>
+            </div>
+            <!-- TabsBar - 關閉按鈕 ( 當 focus 常駐顯示，當 not focus hover 時顯示 ) -->
+            <button type="button" 
+                    @onclick:stopPropagation="true" 
+                    class="w-5 h-5 shrink-0 rounded-sm hover:bg-zinc-300 hover:text-zinc-500 hidden group-hover:block group-data-[active=true]:block" 
+                    title="關閉">
+                <XIcon />
+            </button>
+        </div>
     </div>
 
-    <!--  TabsBar - Creat New Label Engine Page Button -->
-    <button type="button" class="px-1 rounded hover:bg-slate-200" title="關閉">
-      +
+    <!-- 模板檢視畫面 TAB -->
+    <div data-active="@(activeTabId == 2 ? "true" : "false")" @onclick="() => OnTabClick(2, 456)"
+        class="min-w-[50px] max-w-[200px] px-2 border-r border-zinc-300 h-full group hover:bg-zinc-200 data-[active=true]:bg-white data-[active=true]:hover:bg-white">
+        <div class="flex items-center gap-1 h-full">
+            <div class="flex items-center gap-1 min-w-0 flex-1">
+                <div class="w-5 h-5 [--icon-stroke:1.25] group-hover:text-sky-500 group-data-[active=true]:text-sky-500">
+                    <BoxesIcon />
+                </div>
+                <p class="text-xs min-w-0 flex-1 truncate group-hover:text-zinc-900 group-data-[active=true]:text-zinc-900">H&M_Little Kids' Graphic Tee</p>
+            </div>
+            <!-- TabsBar - 關閉按鈕 ( 當 focus 常駐顯示，當 not focus hover 時顯示 ) -->
+            <button type="button" 
+                    @onclick:stopPropagation="true" 
+                    class="w-5 h-5 shrink-0 rounded-sm hover:bg-zinc-300 hover:text-zinc-500 hidden group-hover:block group-data-[active=true]:block" 
+                    title="關閉">
+                <XIcon />
+            </button>
+        </div>
+    </div>
+    
+    <button type="button" class="w-5 h-5 p-0.5 rounded-sm hover:bg-zinc-300 hover:text-zinc-500 ml-2"  title="增加新檔">
+        <PlusIcon />
     </button>
 
-  </div>
+</div>
 
 </div>
 
 
+@code {
+    private int? activeTabId = null;
+
+    void OnTabClick(int tabId, int editorId)
+    {
+        activeTabId = tabId;
+        Nav.NavigateTo($"/draft-editor/{editorId}");
+    }
+
+    void OnHomeClick()
+    {
+        activeTabId = null;
+
+        var path = "/" + Nav.ToBaseRelativePath(Nav.Uri).TrimStart('/');
+        if (string.Equals(path, "/controlCenter", StringComparison.OrdinalIgnoreCase))
+            return;
+
+        Nav.NavigateTo("/controlCenter");
+    }
+}

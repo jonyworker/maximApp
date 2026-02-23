@@ -1,4 +1,124 @@
-@page "/template-review"
+@page "/controlCenter/template-review"
 @layout maximApp.SharedUI.Components.Layouts.ControlCenter.ControlCenterLayout
 
+@using maximApp.SharedUI.Components.Icons
+
 <h1 class="text-xl font-semibold">Template Review Home.razor</h1>
+
+<div class="bg-white rounded-lg shadow-sm border border-slate-200 flex flex-col h-full">
+    <!-- Table Header Search Bar -->
+    <div class="p-6 flex items-center space-x-1.5 border-b border-slate-200">
+        <!-- Search Input -->
+        <div class="flex-1">
+            <input
+                class="w-full bg-white border border-slate-200 rounded-md text-sm px-3 py-2.5"
+                placeholder="請輸入關鍵字搜尋標籤名稱"
+                type="text" />
+        </div>
+        <!-- Search Brand Selector -->
+        <div class="relative w-92">
+            <select class="w-full pl-3 pr-10 py-2.5 bg-white border border-slate-200 rounded-md text-sm appearance-none focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all">
+                <option>PUMA</option>
+                <option>NIKE</option>
+                <option>ADIDAS</option>
+            </select>
+
+            <div class="absolute right-3 inset-y-0 flex items-center pointer-events-none">
+                <div class="w-4 h-4 text-slate-400">
+                    <ChevronsUpDownIcon />
+                </div>
+            </div>
+        </div>
+        <!-- Search button -->
+        <button class="p-3 border border-slate-200 rounded-md bg-white text-slate-900">
+            <div class="w-4 h-4">
+                <SearchIcon />
+            </div>
+        </button>
+    </div>
+
+    <!-- table body (list) -->
+    <div class="flex-1 overflow-auto">
+        <table class="w-full text-left border-collapse ">
+            <colgroup>
+                <col class="w-[320px]" />   <!-- Name -->
+                <col class="w-30" />   <!-- Brand -->
+                <col class="w-45" />   <!-- Created -->
+                <col class="w-35" />   <!-- Creator -->
+                <col class="w-45" />   <!-- Modified -->
+                <col class="w-35" />   <!-- Modifier -->
+                <col class="w-45" />   <!-- Last Sync -->
+                <col class="w-35" />   <!-- Sync User -->
+            </colgroup>
+            <thead>
+                <tr class="bg-white text-xs font-medium text-slate-500 uppercase tracking-wider sticky top-0 shadow-sm">
+                    <th class="pl-6 py-3.5">名稱</th>
+                    <th class="px-3 py-3.5">品牌</th>
+                    <th class="px-3 py-3.5">創建時間</th>
+                    <th class="px-3 py-3.5">創建人</th>
+                    <th class="px-3 py-3.5">修改時間</th>
+                    <th class="px-3 py-3.5">修改人</th>
+                    <th class="px-3 py-3.5">結束標修改時間</th>
+                    <th class="px-3 py-3.5">結束標修改人</th>
+                </tr>
+            </thead>
+
+            <tbody class="">
+                <tr class="border-b border-slate-200 hover:bg-slate-50 transition-colors">
+                    <td class="px-6 py-4 text-base font-medium text-slate-800 truncate">
+                        Generic RFID UPC Combo HangTag 83x25mm-ST
+                    </td>
+                    <td class="px-3 py-3.5 text-base font-medium text-slate-800">PUMA</td>
+                    <td class="px-3 py-3.5 text-base font-medium text-slate-800">2024-08-04 09:18:03</td>
+                    <td class="px-3 py-3.5 text-base font-medium text-slate-800">ShenTong</td>
+                    <td class="px-3 py-3.5 text-base font-medium text-slate-800">2024-09-04 13:52:21</td>
+                    <td class="px-3 py-3.5 text-base font-medium text-slate-800">Bruce</td>
+                    <td class="px-3 py-3.5 text-base font-medium text-slate-800">2024-09-04 13:52:21</td>
+                    <td class="px-3 py-3.5 text-base font-medium text-slate-800">Bruce</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- table footer -->
+    <div class="px-6 py-3 border-t border-slate-200 flex items-center justify-between text-sm font-medium text-slate-800">
+        <p class="text-slate-500">
+        1 of 100 row(s) selected.
+        </p>
+        <!-- table footer pagination -->
+        <div class="flex items-center space-x-8">
+            <div class="flex items-center space-x-2">
+                <span>Rows per page</span>
+                <select class="py-1 pl-2 pr-8 bg-white border border-slate-200 rounded text-sm focus:ring-1 focus:ring-primary outline-none">
+                <option>10</option>
+                <option>25</option>
+                <option>50</option>
+                </select>
+            </div>
+            <span>Page 1 of 10</span>
+            <div class="flex items-center space-x-2">
+                <button class="p-2 border border-slate-200 rounded-md bg-white text-slate-900">
+                    <div class="w-4 h-4">
+                        <ChevronsLeftIcon />
+                    </div>
+                </button>
+                <button class="p-2 border border-slate-200 rounded-md bg-white text-slate-900">
+                    <div class="w-4 h-4">
+                        <ChevronLeftIcon />
+                    </div>
+                </button>
+                <button class="p-2 border border-slate-200 rounded-md bg-white text-slate-900">
+                    <div class="w-4 h-4">
+                        <ChevronRightIcon />
+                    </div>
+                </button>
+                <button class="p-2 border border-slate-200 rounded-md bg-white text-slate-900">
+                    <div class="w-4 h-4">
+                        <ChevronsRightIcon />
+                    </div>
+                </button>
+            
+            </div>
+        </div>
+    </div>
+</div>

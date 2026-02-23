@@ -4,23 +4,23 @@
 @inject NavigationManager Nav
 
 <CascadingValue Value="IsReadOnly" Name="IsReadOnly">
-    <div class="h-full grid grid-rows-[56px_1fr]">
+    <div class="h-full grid grid-rows-[80px_1fr]">
         <!-- Header -->
-        <div class="border-b bg-white">
+        <div class="border-b bg-white border-slate-200">
             <EditorHeader />
         </div>
 
         <!-- Editor Body -->
-        <div class="min-h-0 grid grid-cols-[280px_1fr_360px]">
-            <aside class="min-h-0 border-r bg-white overflow-auto">
+        <div class="min-h-0 grid grid-cols-[248px_1fr_298px]">
+            <aside class="min-h-0 border-r border-slate-200 bg-white">
                 <EditorLeftPanel />
             </aside>
 
-            <section class="min-h-0 bg-slate-100 overflow-hidden">
+            <section class="min-h-0 bg-gray-100 overflow-hidden">
                 <EditorCanvas />
             </section>
 
-            <aside class="min-h-0 border-l bg-white overflow-auto">
+            <aside class="min-h-0 border-l border-slate-200 bg-white">
                 <EditorRightPanel />
             </aside>
         </div>

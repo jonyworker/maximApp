@@ -1,3 +1,189 @@
-<div class="p-4 text-sm">
-  屬性設定
-</div>
+@using maximApp.SharedUI.Components.Icons
+
+<section class="h-full flex flex-col">
+    <!-- 屬性設定 - Title -->
+    <div class="p-4 border-b border-slate-200">
+        <h3 class="text-base font-medium text-slate-900">屬性設定</h3>
+    </div>
+
+    <!-- 屬性設定 - 內容 -->
+    <form @onsubmit:preventDefault class="flex-1 min-h-0 overflow-y-auto p-4 space-y-3">
+        <fieldset class="space-y-3">
+
+            <!-- 區域編號 -->
+            <div class="space-y-1">
+                <label for="regionCode" class="block text-sm font-medium text-slate-900">
+                    區域編號
+                </label>
+                <input id="regionCode"
+                    class="w-full h-8 px-2 border border-slate-300 rounded text-xs outline-none transition-shadow focus:ring-1 focus:ring-blue-500 focus:border-blue-500"
+                    type="text"
+                    @bind="RegionCode" />
+            </div>
+
+            <!-- 語言方向 -->
+            <div class="space-y-1">
+                <label for="textDirection" class="block text-sm font-medium text-slate-900">
+                    語言方向
+                </label>
+
+                <div class="relative">
+                    <select id="textDirection"
+                            class="w-full h-8 pl-2 pr-8 border border-slate-300 rounded text-xs appearance-none bg-white outline-none transition-shadow
+                                   focus:ring-1 focus:ring-blue-500 focus:border-blue-500
+                                   @(TextDirection == null ? "text-slate-400" : "text-slate-900")"
+                            @bind="TextDirection">
+                        <option value="" disabled hidden>選擇語言方向</option>
+                        <option value="rtl">由右至左</option>
+                        <option value="ltr">由左至右</option>
+                    </select>
+
+                    <div class="absolute right-2 inset-y-0 flex items-center pointer-events-none">
+                        <div class="w-4 h-4 [--icon-stroke:1.5] text-slate-500">
+                            <ChevronsUpDownIcon />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 拆分 -->
+            <div class="space-y-1">
+                <label for="isSplit" class="block text-sm font-medium text-slate-900">
+                    拆分
+                </label>
+
+                <div class="relative">
+                    <select id="isSplit"
+                            class="w-full h-8 pl-2 pr-8 border border-slate-300 rounded text-xs appearance-none bg-white outline-none transition-shadow
+                            focus:ring-1 focus:ring-blue-500 focus:border-blue-500
+                            @(IsSplit == null ? "text-slate-400" : "text-slate-900")"
+                            @bind="IsSplit">
+                        <option value="" disabled hidden>選擇拆分方式</option>
+                        <option value="Y">是</option>
+                        <option value="N">否</option>
+                    </select>
+
+                    <div class="absolute right-2 inset-y-0 flex items-center pointer-events-none">
+                        <div class="w-4 h-4 [--icon-stroke:1.5] text-slate-500">
+                            <ChevronsUpDownIcon />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 擺放方式 -->
+            <div class="space-y-1">
+                <label for="placement" class="block text-sm font-medium text-slate-900">
+                    擺放方式
+                </label>
+
+                <div class="relative">
+                    <select id="placement"
+                            class="w-full h-8 pl-2 pr-8 border border-slate-300 rounded text-xs appearance-none bg-white outline-none transition-shadow
+                                   focus:ring-1 focus:ring-blue-500 focus:border-blue-500
+                                   @(Placement == null ? "text-slate-400" : "text-slate-900")"
+                            @bind="Placement">
+                        <option value="" disabled hidden>選擇擺放方式</option>
+                        <option value="top">上</option>
+                        <option value="bottom">下</option>
+                    </select>
+
+                    <div class="absolute right-2 inset-y-0 flex items-center pointer-events-none">
+                        <div class="w-4 h-4 [--icon-stroke:1.5] text-slate-500">
+                            <ChevronsUpDownIcon />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 上邊距 -->
+            <div class="space-y-1">
+                <label for="marginTop" class="block text-sm font-medium text-slate-900">
+                    上邊距
+                </label>
+                <input id="marginTop"
+                    type="number"
+                    class="w-full h-8 px-2 border border-slate-300 rounded text-xs outline-none transition-shadow focus:ring-1 focus:ring-blue-500 focus:border-blue-500"
+                    @bind="MarginTop" />
+            </div>
+
+            <!-- 下邊距 -->
+            <div class="space-y-1">
+                <label for="marginBottom" class="block text-sm font-medium text-slate-900">
+                    下邊距
+                </label>
+                <input id="marginBottom"
+                    type="number"
+                    class="w-full h-8 px-2 border border-slate-300 rounded text-xs outline-none transition-shadow focus:ring-1 focus:ring-blue-500 focus:border-blue-500"
+                    @bind="MarginBottom" />
+            </div>
+
+            <!-- 基礎區塊 -->
+            <div class="space-y-1">
+                <label for="baseBlock" class="block text-sm font-medium text-slate-900">
+                    基礎區塊
+                </label>
+
+                <div class="relative">
+                    <select id="baseBlock"
+                            class="w-full h-8 pl-2 pr-8 border border-slate-300 rounded text-xs appearance-none bg-white outline-none transition-shadow
+                                   focus:ring-1 focus:ring-blue-500 focus:border-blue-500
+                                   @(BaseBlock == null ? "text-slate-400" : "text-slate-900")"
+                            @bind="BaseBlock">
+                        <option value="" disabled hidden>選擇基礎區塊</option>
+                        <option value="top">上</option>
+                        <option value="bottom">下</option>
+                    </select>
+
+                    <div class="absolute right-2 inset-y-0 flex items-center pointer-events-none">
+                        <div class="w-4 h-4 [--icon-stroke:1.5] text-slate-500">
+                            <ChevronsUpDownIcon />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 所屬區塊 -->
+            <div class="space-y-1">
+                <label for="parentBlock" class="block text-sm font-medium text-slate-900">
+                    所屬區塊（可複選）
+                </label>
+
+                <div class="relative">
+                    <select id="parentBlock"
+                            class="w-full h-8 pl-2 pr-8 border border-slate-300 rounded text-xs appearance-none bg-white outline-none transition-shadow
+                            focus:ring-1 focus:ring-blue-500 focus:border-blue-500
+                            @(ParentBlock == null ? "text-slate-400" : "text-slate-900")"
+                            @bind="ParentBlock">
+                        <option value="" disabled hidden>選擇所屬區塊</option>
+                        <option value="QY01">QY01</option>
+                        <option value="QY02">QY02</option>
+                        <option value="QY03">QY03</option>
+                    </select>
+
+                    <div class="absolute right-2 inset-y-0 flex items-center pointer-events-none">
+                        <div class="w-4 h-4 [--icon-stroke:1.5] text-slate-500">
+                            <ChevronsUpDownIcon />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </fieldset>
+    </form>
+</section>
+
+@code {
+    private string RegionCode { get; set; } = "QY04";
+
+    private string? TextDirection { get; set; }
+    private string? IsSplit { get; set; }
+    private string? Placement { get; set; }
+
+    private int MarginTop { get; set; } = 0;
+    private int MarginBottom { get; set; } = 0;
+
+    private string? BaseBlock { get; set; }
+    private string? ParentBlock { get; set; }
+}
+

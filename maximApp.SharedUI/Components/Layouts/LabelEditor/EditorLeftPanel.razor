@@ -1,3 +1,359 @@
-<div class="p-4 text-sm">
-  工具 / Objects Tree
+@using maximApp.SharedUI.Components.Icons
+
+<div class="h-full flex flex-col">
+
+    <!-- ToolBar - Title -->
+    <div class="px-4 py-2 border-b border-slate-200">
+        <p class="text-base font-medium text-slate-900">Tool Bar</p>
+    </div>
+
+    <!-- ToolBar - 工具選單 -->
+    <div class="p-4 border-b border-slate-200">
+        <div class="grid grid-cols-3 gap-6">
+            <!-- 文字物件工具 -->
+            <button class="p-3 hover:bg-slate-100 rounded text-slate-900 shadow-sm">
+                <div class="w-8 h-8 [--icon-stroke:1.5]">
+                    <TypeIcon />
+                </div>
+            </button>
+
+            <!-- 條碼物件工具 -->
+            <button class="p-3 hover:bg-slate-100 rounded text-slate-900 shadow-sm">
+                <div class="w-8 h-8 [--icon-stroke:1.5]">
+                    <QRCodeIcon />
+                </div>
+            </button>
+
+            <!-- 圖片物件工具 -->
+            <button class="p-3 hover:bg-slate-100 rounded text-slate-900 shadow-sm">
+                <div class="w-8 h-8 [--icon-stroke:1.5]">
+                    <ImageIcon />
+                </div>
+            </button>
+
+            <!-- 線條物件工具 -->
+            <button class="p-3 hover:bg-slate-100 rounded text-slate-900 shadow-sm">
+                <div class="w-8 h-8 [--icon-stroke:1.5]">
+                    <SlashIcon />
+                </div>
+            </button>
+
+            <!-- 方形物件工具 -->
+            <button class="p-3 hover:bg-slate-100 rounded text-slate-900 shadow-sm">
+                <div class="w-8 h-8 [--icon-stroke:1.5]">
+                    <SquareIcon />
+                </div>
+            </button>
+        </div>
+    </div>
+    
+    <!-- Objects Tree - Title -->
+    <div class="flex items-center justify-between pl-4 pr-3 py-2 border-b border-slate-200">
+        <p class="text-base font-medium text-slate-900">Objects</p>
+        <button class="p-1 hover:bg-slate-100 rounded text-slate-900">
+            <div class="w-4 h-4 flex items-center [--icon-stroke:2] text-slate-500">
+                <ListCollapseIcon />
+            </div>
+        </button>
+    </div>
+
+    <!-- Objects Tree - List (可捲動) -->
+    <div class="p-4 flex-1 min-h-0 overflow-y-auto">
+        <ul class="mb-1 flex flex-col gap-1">
+            <!-- 父層 - QY 001 -->
+            <li>
+                <div class="flex items-center gap-1 py-1 px-1 hover:bg-slate-100 cursor-pointer rounded text-slate-600">
+                    <div class="w-3 h-3 flex items-center [--icon-stroke:1.5] text-slate-400">
+                        <PanelTopLeftIcon />
+                    </div>
+                    <span class="text-xs font-normal text-slate-600">QY-001</span>
+                </div>
+
+                <!-- 子清單 -->
+                <ul class="flex flex-col gap-1 ">
+                    <li class="first:mt-1">
+                        <div class="flex items-center gap-1 py-1 pl-5 px-1 hover:bg-slate-100 cursor-pointer rounded text-slate-600">
+                            <div class="w-3 h-3 flex items-center [--icon-stroke:1.5] text-slate-400">
+                                <LayoutTemplateIcon />
+                            </div>
+                            <span class="text-xs font-normal text-slate-600">BT-001</span>
+                        </div>
+
+                        <!-- 孫清單 -->
+                        <ul class="flex flex-col gap-1">
+                            <li class="first:mt-1">
+                                <div class="flex items-center gap-1 py-1 pl-10 px-1 hover:bg-slate-100 cursor-pointer rounded text-slate-600">
+                                    <div class="w-3 h-3 flex items-center [--icon-stroke:1.5] text-slate-400">
+                                        <TypeIcon />
+                                    </div>
+                                    <span class="text-xs font-normal text-slate-600">company</span>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="flex items-center gap-1 py-1 pl-10 px-1 hover:bg-slate-100 cursor-pointer rounded">
+                                    <div class="w-3 h-3 flex items-center [--icon-stroke:1.5] text-slate-400">
+                                        <TypeIcon />
+                                    </div>
+                                    <span class="text-xs font-normal text-slate-600">address</span>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="flex items-center gap-1 py-1 pl-10 px-1 hover:bg-slate-100 cursor-pointer rounded">
+                                    <div class="w-3 h-3 flex items-center [--icon-stroke:1.5] text-slate-400">
+                                        <TypeIcon />
+                                    </div>
+                                    <span class="text-xs font-normal text-slate-600">zipcode</span>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="flex items-center gap-1 py-1 pl-10 px-1 hover:bg-slate-100 cursor-pointer rounded">
+                                    <div class="w-3 h-3 flex items-center [--icon-stroke:1.5] text-slate-400">
+                                        <TypeIcon />
+                                    </div>
+                                    <span class="text-xs font-normal text-slate-600">country</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <div class="flex items-center gap-1 py-1 pl-5 px-1 hover:bg-slate-100 cursor-pointer rounded text-slate-600">
+                            <div class="w-3 h-3 flex items-center [--icon-stroke:1.5] text-slate-400">
+                                <LayoutTemplateIcon />
+                            </div>
+                            <span class="text-xs font-normal text-slate-600">BT-002</span>
+                        </div>
+
+                        <!-- 孫清單 -->
+                        <ul class="flex flex-col gap-1">
+                            <li class="first:mt-1">
+                                <div class="flex items-center gap-1 py-1 pl-10 px-1 hover:bg-slate-100 cursor-pointer rounded text-slate-600">
+                                    <div class="w-3 h-3 flex items-center [--icon-stroke:1.5] text-slate-400">
+                                        <QRCodeIcon />
+                                    </div>
+                                    <span class="text-xs font-normal text-slate-600">90122435522</span>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="flex items-center gap-1 py-1 pl-10 px-1 hover:bg-slate-100 cursor-pointer rounded">
+                                    <div class="w-3 h-3 flex items-center [--icon-stroke:1.5] text-slate-400">
+                                        <TypeIcon />
+                                    </div>
+                                    <span class="text-xs font-normal text-slate-600">90122435522</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+                
+            </li>
+
+            <!-- 父層 - QY 002 -->
+            <li>
+                <div class="flex items-center gap-1 py-1 px-1 hover:bg-slate-100 cursor-pointer rounded text-slate-600">
+                    <div class="w-3 h-3 flex items-center [--icon-stroke:1.5] text-slate-400">
+                        <PanelTopLeftIcon />
+                    </div>
+                    <span class="text-xs font-normal text-slate-600">QY-002</span>
+                </div>
+
+                <!-- 子清單 -->
+                <ul class="flex flex-col gap-1 ">
+                    <li class="first:mt-1">
+                        <div class="flex items-center gap-1 py-1 pl-5 px-1 hover:bg-slate-100 cursor-pointer rounded text-slate-600">
+                            <div class="w-3 h-3 flex items-center [--icon-stroke:1.5] text-slate-400">
+                                <LayoutTemplateIcon />
+                            </div>
+                            <span class="text-xs font-normal text-slate-600">BT-003</span>
+                        </div>
+
+                        <!-- 孫清單 -->
+                        <ul class="flex flex-col gap-1">
+                            <li class="first:mt-1">
+                                <div class="flex items-center gap-1 py-1 pl-10 px-1 hover:bg-slate-100 cursor-pointer rounded text-slate-600">
+                                    <div class="w-3 h-3 flex items-center [--icon-stroke:1.5] text-slate-400">
+                                        <ImageIcon />
+                                    </div>
+                                    <span class="text-xs font-normal text-slate-600">PUMA_logo</span>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="flex items-center gap-1 py-1 pl-10 px-1 hover:bg-slate-100 cursor-pointer rounded">
+                                    <div class="w-3 h-3 flex items-center [--icon-stroke:1.5] text-slate-400">
+                                        <ImageIcon />
+                                    </div>
+                                    <span class="text-xs font-normal text-slate-600">Bag</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- 父層 - QY 003 -->
+            <li>
+                <div class="flex items-center gap-1 py-1 px-1 hover:bg-slate-100 cursor-pointer rounded text-slate-600">
+                    <div class="w-3 h-3 flex items-center [--icon-stroke:1.5] text-slate-400">
+                        <PanelTopLeftIcon />
+                    </div>
+                    <span class="text-xs font-normal text-slate-600">QY-003</span>
+                </div>
+
+                <!-- 子清單 -->
+                <ul class="flex flex-col gap-1 ">
+                    <li class="first:mt-1">
+                        <div class="flex items-center gap-1 py-1 pl-5 px-1 hover:bg-slate-100 cursor-pointer rounded text-slate-600">
+                            <div class="w-3 h-3 flex items-center [--icon-stroke:1.5] text-slate-400">
+                                <LayoutTemplateIcon />
+                            </div>
+                            <span class="text-xs font-normal text-slate-600">BT-004</span>
+                        </div>
+
+                        <!-- 孫清單 -->
+                        <ul class="flex flex-col gap-1">
+                            <li class="first:mt-1">
+                                <div class="flex items-center gap-1 py-1 pl-10 px-1 hover:bg-slate-100 cursor-pointer rounded text-slate-600">
+                                    <div class="w-3 h-3 flex items-center [--icon-stroke:1.5] text-slate-400">
+                                        <TypeIcon />
+                                    </div>
+                                    <span class="text-xs font-normal text-slate-600">description_cn</span>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="flex items-center gap-1 py-1 pl-10 px-1 hover:bg-slate-100 cursor-pointer rounded text-slate-600">
+                                    <div class="w-3 h-3 flex items-center [--icon-stroke:1.5] text-slate-400">
+                                        <TypeIcon />
+                                    </div>
+                                    <span class="text-xs font-normal text-slate-600">description_en</span>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="flex items-center gap-1 py-1 pl-10 px-1 hover:bg-slate-100 cursor-pointer rounded text-slate-600">
+                                    <div class="w-3 h-3 flex items-center [--icon-stroke:1.5] text-slate-400">
+                                        <TypeIcon />
+                                    </div>
+                                    <span class="text-xs font-normal text-slate-600">description_fr</span>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="flex items-center gap-1 py-1 pl-10 px-1 hover:bg-slate-100 cursor-pointer rounded text-slate-600">
+                                    <div class="w-3 h-3 flex items-center [--icon-stroke:1.5] text-slate-400">
+                                        <TypeIcon />
+                                    </div>
+                                    <span class="text-xs font-normal text-slate-600">description_gr</span>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="flex items-center gap-1 py-1 pl-10 px-1 hover:bg-slate-100 cursor-pointer rounded text-slate-600">
+                                    <div class="w-3 h-3 flex items-center [--icon-stroke:1.5] text-slate-400">
+                                        <TypeIcon />
+                                    </div>
+                                    <span class="text-xs font-normal text-slate-600">description_sp</span>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="flex items-center gap-1 py-1 pl-10 px-1 hover:bg-slate-100 cursor-pointer rounded text-slate-600">
+                                    <div class="w-3 h-3 flex items-center [--icon-stroke:1.5] text-slate-400">
+                                        <TypeIcon />
+                                    </div>
+                                    <span class="text-xs font-normal text-slate-600">description_kr</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- 父層 - QY 004 -->
+            <li>
+                <div class="flex items-center gap-1 py-1 px-1 hover:bg-slate-100 cursor-pointer rounded text-slate-600">
+                    <div class="w-3 h-3 flex items-center [--icon-stroke:1.5] text-slate-400">
+                        <PanelTopLeftIcon />
+                    </div>
+                    <span class="text-xs font-normal text-slate-600">QY-004</span>
+                </div>
+
+                <!-- 子清單 -->
+                <ul class="flex flex-col gap-1 ">
+                    <li class="first:mt-1">
+                        <div class="flex items-center gap-1 py-1 pl-5 px-1 hover:bg-slate-100 cursor-pointer rounded text-slate-600">
+                            <div class="w-3 h-3 flex items-center [--icon-stroke:1.5] text-slate-400">
+                                <LayoutTemplateIcon />
+                            </div>
+                            <span class="text-xs font-normal text-slate-600">BT-005</span>
+                        </div>
+
+                        <!-- 孫清單 -->
+                        <ul class="flex flex-col gap-1">
+                            <li class="first:mt-1">
+                                <div class="flex items-center gap-1 py-1 pl-10 px-1 hover:bg-slate-100 cursor-pointer rounded text-slate-600">
+                                    <div class="w-3 h-3 flex items-center [--icon-stroke:1.5] text-slate-400">
+                                        <TypeIcon />
+                                    </div>
+                                    <span class="text-xs font-normal text-slate-600">description_cn</span>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="flex items-center gap-1 py-1 pl-10 px-1 hover:bg-slate-100 cursor-pointer rounded text-slate-600">
+                                    <div class="w-3 h-3 flex items-center [--icon-stroke:1.5] text-slate-400">
+                                        <TypeIcon />
+                                    </div>
+                                    <span class="text-xs font-normal text-slate-600">description_en</span>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="flex items-center gap-1 py-1 pl-10 px-1 hover:bg-slate-100 cursor-pointer rounded text-slate-600">
+                                    <div class="w-3 h-3 flex items-center [--icon-stroke:1.5] text-slate-400">
+                                        <TypeIcon />
+                                    </div>
+                                    <span class="text-xs font-normal text-slate-600">description_fr</span>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="flex items-center gap-1 py-1 pl-10 px-1 hover:bg-slate-100 cursor-pointer rounded text-slate-600">
+                                    <div class="w-3 h-3 flex items-center [--icon-stroke:1.5] text-slate-400">
+                                        <TypeIcon />
+                                    </div>
+                                    <span class="text-xs font-normal text-slate-600">country_gr</span>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="flex items-center gap-1 py-1 pl-10 px-1 hover:bg-slate-100 cursor-pointer rounded text-slate-600">
+                                    <div class="w-3 h-3 flex items-center [--icon-stroke:1.5] text-slate-400">
+                                        <TypeIcon />
+                                    </div>
+                                    <span class="text-xs font-normal text-slate-600">country_sp</span>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="flex items-center gap-1 py-1 pl-10 px-1 hover:bg-slate-100 cursor-pointer rounded text-slate-600">
+                                    <div class="w-3 h-3 flex items-center [--icon-stroke:1.5] text-slate-400">
+                                        <TypeIcon />
+                                    </div>
+                                    <span class="text-xs font-normal text-slate-600">country_kr</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
 </div>

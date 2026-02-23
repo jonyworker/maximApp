@@ -1,10 +1,100 @@
-<div class="h-full flex items-center justify-between px-4 text-sm">
-  <div class="text-slate-600">
-    PUMA / Generic RFID HangTag
-  </div>
 
-  <div class="flex items-center gap-2">
-    <button class="px-2 py-1 border rounded">儲存</button>
-    <button class="px-2 py-1 border rounded">下載</button>
-  </div>
+@using maximApp.SharedUI.Components.Icons
+
+<div class="flex items-center justify-between pr-6 pl-4 py-4">
+    <!-- 編輯功能區 - ( 新增頁面、新增區域、新增區塊、即時資料維護、結束標檢視 ) -->
+    <div class="flex items-center gap-2">
+        <!-- 新增頁面 -->
+        <button class="p-2 hover:bg-slate-100 rounded text-slate-900">
+            <div class="w-8 h-8 [--icon-stroke:1]">
+                <SquarePenIcon />
+            </div>
+        </button>
+        <!-- 新增區域 -->
+        <button class="p-2 hover:bg-slate-100 rounded text-slate-900">
+            <div class="w-8 h-8 [--icon-stroke:1]">
+                <PanelTopLeftIcon />
+            </div>
+        </button>
+        <!-- 新增區塊 -->
+        <button class="p-2 hover:bg-slate-100 rounded text-slate-900">
+            <div class="w-8 h-8 [--icon-stroke:1]">
+                <LayoutTemplateIcon />
+            </div>
+        </button>
+        <!-- 即時資料維護 -->
+        <button class="p-2 hover:bg-slate-100 rounded text-slate-900">
+            <div class="w-8 h-8 [--icon-stroke:1]">
+                <FileBracesIcon />
+            </div>
+        </button>
+        <!-- 分隔線 -->
+        <span class="w-px h-8 bg-slate-200 mx-2"></span>
+        <!-- 結束標檢視 -->
+        <button class="p-2 hover:bg-slate-100 rounded text-slate-900">
+            <div class="w-8 h-8 [--icon-stroke:1]">
+                <FlagIcon />
+            </div>
+        </button>
+        
+    </div>
+    
+    <!-- 檔案資訊 - ( 所屬廠牌、檔名、欄位區塊區域頁面數量 ) -->
+    <div class="flex flex-col items-center justify-center absolute left-1/2 -translate-x-1/2">
+        <div class="flex items-center gap-2 text-xs font-medium text-slate-500 mb-0.5">
+            <span class="text-base font-medium">PUMA</span>
+            <button class="w-4 h-4 hover:bg-slate-100 rounded">
+                <div class="[--icon-stroke:1]">
+                    <ChevronDownIcon />
+                </div>
+            </button>
+            <span class="text-base font-medium text-slate-900">/</span>
+            <span class="text-base font-medium text-slate-900">Generic RFID UPC Combo HangTag 83x25mm-ST</span>
+        </div>
+        <div class="text-sm font-medium text-slate-900">
+            [ 欄位 107 / 區塊 22 / 區域 16 / 頁面 6 / PDF 13 ]
+        </div>
+    </div>
+
+    <!-- 檢視發佈功能區 - ( 版本歷史紀錄、發佈請求、輸入輸出、儲存、編輯區縮放 ) -->
+    <div class="flex items-center gap-1">
+
+        <!-- 版本歷史紀錄 -->
+        <button class="p-2 hover:bg-slate-100 rounded text-slate-900">
+            <div class="w-8 h-8 [--icon-stroke:1]">
+                <FolderClockIcon />
+            </div>
+        </button>
+        <!-- 分隔線 -->
+        <span class="w-px h-8 bg-slate-200 mx-3"></span>
+        <!-- 發佈請求 -->
+        <button class="p-2 hover:bg-slate-100 rounded text-slate-900">
+            <div class="w-8 h-8 [--icon-stroke:1]">
+                <RocketIcon />
+            </div>
+        </button>
+        <!-- 輸入輸出 -->
+        <button class="p-2 hover:bg-slate-100 rounded text-slate-900">
+            <div class="w-8 h-8 [--icon-stroke:1]">
+                <ArrowDownUpIcon />
+            </div>
+        </button>
+        <!-- 儲存 -->
+        <button class="p-2 hover:bg-slate-100 rounded text-slate-900">
+            <div class="w-8 h-8 [--icon-stroke:1]">
+                <SaveIcon />
+            </div>
+        </button>
+        <!-- 分隔線 -->
+        <span class="w-px h-8 bg-slate-200 mx-3"></span>
+        <!-- 編輯區縮放 -->
+        <div class="flex items-center gap-2 px-2 py-1 text-sm font-medium text-slate-900 hover:bg-slate-100 cursor-pointer">
+            <span class="text-base font-medium text-slate-900">75%</span>
+            <button class="w-4 h-4 text-slate-900">
+                <div class="[--icon-stroke:1]">
+                    <ChevronDownIcon />
+                </div>
+            </button>
+        </div>
+    </div>
 </div>

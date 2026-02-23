@@ -6,3 +6,13 @@
         font-family: "Noto Sans TC", ui-sans-serif, system-ui, sans-serif;
     }
 }
+
+@layer components {
+    .canvas-grid {
+        @apply bg-gray-100;
+        background-size: var(--grid-size, 10px) var(--grid-size, 10px);;
+        background-image:
+        linear-gradient(to right, #e2e8f0 1px, transparent 1px),
+        linear-gradient(to bottom, #e2e8f0 1px, transparent 1px);
+    }
+}

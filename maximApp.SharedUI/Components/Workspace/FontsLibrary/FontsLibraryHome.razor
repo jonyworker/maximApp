@@ -1,4 +1,712 @@
-@page "/fonts-library"
+@page "/controlCenter/fonts-library"
 @layout maximApp.SharedUI.Components.Layouts.ControlCenter.ControlCenterLayout
+@using maximApp.SharedUI.Components.Icons
 
 <h1 class="text-xl font-semibold">Fonts Library Home.razor</h1>
+
+<div class="bg-white rounded-lg shadow-sm border border-slate-200 grid grid-cols-[280px_1fr] h-full">
+    <!-- 字體類型與品牌 -->
+    <div class="border-r border-slate-200 flex-1 flex flex-col min-h-0">
+        
+        <!-- 通用字型 -->
+        <div class="px-4 py-2 border-b border-slate-200 flex items-center justify-between">
+            <h3 class="text-base font-medium text-slate-900">通用字型</h3>
+            <button class="p-1 hover:bg-slate-100 rounded text-slate-900">
+                <div class="w-6 h-6 [--icon-stroke:1]">
+                    <MinusIcon />
+                </div>
+            </button>
+        </div>
+        <!-- 通用字型列表 -->
+        <ul class="px-2 py-2 flex flex-col space-y-2 border-b border-slate-200">
+    
+            <li class="group">
+                <button type="button"
+                        class="w-full flex items-center justify-between px-2 py-1 rounded-md text-xs
+                            hover:bg-slate-100">
+
+                    <div class="flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full border border-slate-400 group-focus-within:border-emerald-500 group-focus-within:bg-emerald-500"></span>
+                        <span class="text-slate-600 group-focus-within:font-semibold group-focus-within:text-slate-900 ">
+                            All General Fonts
+                        </span>
+                    </div>
+
+                    <span class="text-slate-400 tabular-nums">372</span>
+                </button>
+            </li>
+
+            <li class="group">
+                <button type="button"
+                        class="w-full flex items-center justify-between px-2 py-1 rounded-md text-xs
+                            hover:bg-slate-100">
+
+                    <div class="flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full border border-slate-400 group-focus-within:border-emerald-500 group-focus-within:bg-emerald-500"></span>
+                        <span class="text-slate-600 group-focus-within:font-semibold group-focus-within:text-slate-900 ">
+                            Maxim
+                        </span>
+                    </div>
+
+                    <span class="text-slate-400 tabular-nums">3</span>
+                </button>
+            </li>
+
+        </ul>
+
+        <!-- 專用字型列表 -->
+        <div class="px-4 py-2 border-b border-slate-200 flex items-center justify-between">
+            <h3 class="text-base font-medium text-slate-900">專用字型</h3>
+            <button class="p-1 hover:bg-slate-100 rounded text-slate-900">
+                <div class="w-6 h-6 [--icon-stroke:1]">
+                    <MinusIcon />
+                </div>
+            </button>
+        </div>
+        <!-- 專用字型列表 -->
+        
+        <ul class="px-2 py-2 flex flex-col space-y-2 flex-1 min-h-0 overflow-y-auto">
+            <!-- Adidas -->
+            <li class="group">
+                <button type="button"
+                        class="w-full flex items-center justify-between px-2 py-1 rounded-md text-xs
+                            hover:bg-slate-100">
+
+                    <div class="flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full border border-slate-400 group-focus-within:border-emerald-500 group-focus-within:bg-emerald-500"></span>
+                        <span class="text-slate-600 group-focus-within:font-semibold group-focus-within:text-slate-900 ">
+                            Adidas
+                        </span>
+                    </div>
+
+                    <span class="text-slate-400 tabular-nums">18</span>
+                </button>
+            </li>
+            <!-- Aldo -->
+            <li class="group">
+                <button type="button"
+                        class="w-full flex items-center justify-between px-2 py-1 rounded-md text-xs
+                            hover:bg-slate-100">
+
+                    <div class="flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full border border-slate-400 group-focus-within:border-emerald-500 group-focus-within:bg-emerald-500"></span>
+                        <span class="text-slate-600 group-focus-within:font-semibold group-focus-within:text-slate-900 ">
+                            Aldo
+                        </span>
+                    </div>
+
+                    <span class="text-slate-400 tabular-nums">2</span>
+                </button>
+            </li>
+            <!-- American Eagle -->
+            <li class="group">
+                <button type="button"
+                        class="w-full flex items-center justify-between px-2 py-1 rounded-md text-xs
+                            hover:bg-slate-100">
+
+                    <div class="flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full border border-slate-400 group-focus-within:border-emerald-500 group-focus-within:bg-emerald-500"></span>
+                        <span class="text-slate-600 group-focus-within:font-semibold group-focus-within:text-slate-900 ">
+                            American Eagle
+                        </span>
+                    </div>
+
+                    <span class="text-slate-400 tabular-nums">18</span>
+                </button>
+            </li>
+            <!-- Armani -->
+            <li class="group">
+                <button type="button"
+                        class="w-full flex items-center justify-between px-2 py-1 rounded-md text-xs
+                            hover:bg-slate-100">
+
+                    <div class="flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full border border-slate-400 group-focus-within:border-emerald-500 group-focus-within:bg-emerald-500"></span>
+                        <span class="text-slate-600 group-focus-within:font-semibold group-focus-within:text-slate-900 ">
+                            Armani
+                        </span>
+                    </div>
+
+                    <span class="text-slate-400 tabular-nums">18</span>
+                </button>
+            </li>
+
+            <!-- Asics -->
+            <li class="group">
+                <button type="button"
+                        class="w-full flex items-center justify-between px-2 py-1 rounded-md text-xs
+                            hover:bg-slate-100">
+
+                    <div class="flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full border border-slate-400 group-focus-within:border-emerald-500 group-focus-within:bg-emerald-500"></span>
+                        <span class="text-slate-600 group-focus-within:font-semibold group-focus-within:text-slate-900 ">
+                            Asics
+                        </span>
+                    </div>
+
+                    <span class="text-slate-400 tabular-nums">6</span>
+                </button>
+            </li>
+
+            <!-- Audemars Piguest -->
+            <li class="group">
+                <button type="button"
+                        class="w-full flex items-center justify-between px-2 py-1 rounded-md text-xs
+                            hover:bg-slate-100">
+
+                    <div class="flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full border border-slate-400 group-focus-within:border-emerald-500 group-focus-within:bg-emerald-500"></span>
+                        <span class="text-slate-600 group-focus-within:font-semibold group-focus-within:text-slate-900 ">
+                            Audemars Piguest
+                        </span>
+                    </div>
+
+                    <span class="text-slate-400 tabular-nums">4</span>
+                </button>
+            </li>
+
+            <!-- Banana Republic -->
+            <li class="group">
+                <button type="button"
+                        class="w-full flex items-center justify-between px-2 py-1 rounded-md text-xs
+                            hover:bg-slate-100">
+
+                    <div class="flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full border border-slate-400 group-focus-within:border-emerald-500 group-focus-within:bg-emerald-500"></span>
+                        <span class="text-slate-600 group-focus-within:font-semibold group-focus-within:text-slate-900 ">
+                            Banana Republic
+                        </span>
+                    </div>
+
+                    <span class="text-slate-400 tabular-nums">9</span>
+                </button>
+            </li>
+
+            <!-- Bogner -->
+            <li class="group">
+                <button type="button"
+                        class="w-full flex items-center justify-between px-2 py-1 rounded-md text-xs
+                            hover:bg-slate-100">
+
+                    <div class="flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full border border-slate-400 group-focus-within:border-emerald-500 group-focus-within:bg-emerald-500"></span>
+                        <span class="text-slate-600 group-focus-within:font-semibold group-focus-within:text-slate-900 ">
+                            Bogner
+                        </span>
+                    </div>
+
+                    <span class="text-slate-400 tabular-nums">6</span>
+                </button>
+            </li>
+
+            <!-- Bottega Veneta -->
+            <li class="group">
+                <button type="button"
+                        class="w-full flex items-center justify-between px-2 py-1 rounded-md text-xs
+                            hover:bg-slate-100">
+
+                    <div class="flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full border border-slate-400 group-focus-within:border-emerald-500 group-focus-within:bg-emerald-500"></span>
+                        <span class="text-slate-600 group-focus-within:font-semibold group-focus-within:text-slate-900 ">
+                            Bottega Veneta
+                        </span>
+                    </div>
+
+                    <span class="text-slate-400 tabular-nums">20</span>
+                </button>
+            </li>
+
+            <!-- Breguet -->
+            <li class="group">
+                <button type="button"
+                        class="w-full flex items-center justify-between px-2 py-1 rounded-md text-xs
+                            hover:bg-slate-100">
+
+                    <div class="flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full border border-slate-400 group-focus-within:border-emerald-500 group-focus-within:bg-emerald-500"></span>
+                        <span class="text-slate-600 group-focus-within:font-semibold group-focus-within:text-slate-900 ">
+                            Breguet
+                        </span>
+                    </div>
+
+                    <span class="text-slate-400 tabular-nums">6</span>
+                </button>
+            </li>
+
+            <!-- Brunello Cucinelli -->
+            <li class="group">
+                <button type="button"
+                        class="w-full flex items-center justify-between px-2 py-1 rounded-md text-xs
+                            hover:bg-slate-100">
+
+                    <div class="flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full border border-slate-400 group-focus-within:border-emerald-500 group-focus-within:bg-emerald-500"></span>
+                        <span class="text-slate-600 group-focus-within:font-semibold group-focus-within:text-slate-900 ">
+                            Brunello Cucinelli
+                        </span>
+                    </div>
+
+                    <span class="text-slate-400 tabular-nums">32</span>
+                </button>
+            </li>
+
+            <!-- Burberry -->
+            <li class="group">
+                <button type="button"
+                        class="w-full flex items-center justify-between px-2 py-1 rounded-md text-xs
+                            hover:bg-slate-100">
+
+                    <div class="flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full border border-slate-400 group-focus-within:border-emerald-500 group-focus-within:bg-emerald-500"></span>
+                        <span class="text-slate-600 group-focus-within:font-semibold group-focus-within:text-slate-900 ">
+                            Burberry
+                        </span>
+                    </div>
+
+                    <span class="text-slate-400 tabular-nums">8</span>
+                </button>
+            </li>
+
+            <!-- C & A -->
+            <li class="group">
+                <button type="button"
+                        class="w-full flex items-center justify-between px-2 py-1 rounded-md text-xs
+                            hover:bg-slate-100">
+
+                    <div class="flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full border border-slate-400 group-focus-within:border-emerald-500 group-focus-within:bg-emerald-500"></span>
+                        <span class="text-slate-600 group-focus-within:font-semibold group-focus-within:text-slate-900 ">
+                            C & A
+                        </span>
+                    </div>
+
+                    <span class="text-slate-400 tabular-nums">18</span>
+                </button>
+            </li>
+
+            <!-- Calvin Klein -->
+            <li class="group">
+                <button type="button"
+                        class="w-full flex items-center justify-between px-2 py-1 rounded-md text-xs
+                            hover:bg-slate-100">
+
+                    <div class="flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full border border-slate-400 group-focus-within:border-emerald-500 group-focus-within:bg-emerald-500"></span>
+                        <span class="text-slate-600 group-focus-within:font-semibold group-focus-within:text-slate-900 ">
+                            Calvin Klein
+                        </span>
+                    </div>
+
+                    <span class="text-slate-400 tabular-nums">12</span>
+                </button>
+            </li>
+
+            <!-- Chanel -->
+            <li class="group">
+                <button type="button"
+                        class="w-full flex items-center justify-between px-2 py-1 rounded-md text-xs
+                            hover:bg-slate-100">
+
+                    <div class="flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full border border-slate-400 group-focus-within:border-emerald-500 group-focus-within:bg-emerald-500"></span>
+                        <span class="text-slate-600 group-focus-within:font-semibold group-focus-within:text-slate-900 ">
+                            Chanel
+                        </span>
+                    </div>
+
+                    <span class="text-slate-400 tabular-nums">18</span>
+                </button>
+            </li>
+
+            <!-- Coach -->
+            <li class="group">
+                <button type="button"
+                        class="w-full flex items-center justify-between px-2 py-1 rounded-md text-xs
+                            hover:bg-slate-100">
+
+                    <div class="flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full border border-slate-400 group-focus-within:border-emerald-500 group-focus-within:bg-emerald-500"></span>
+                        <span class="text-slate-600 group-focus-within:font-semibold group-focus-within:text-slate-900 ">
+                            Coach
+                        </span>
+                    </div>
+
+                    <span class="text-slate-400 tabular-nums">30</span>
+                </button>
+            </li>
+
+            <!-- Dior -->
+            <li class="group">
+                <button type="button"
+                        class="w-full flex items-center justify-between px-2 py-1 rounded-md text-xs
+                            hover:bg-slate-100">
+
+                    <div class="flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full border border-slate-400 group-focus-within:border-emerald-500 group-focus-within:bg-emerald-500"></span>
+                        <span class="text-slate-600 group-focus-within:font-semibold group-focus-within:text-slate-900 ">
+                            Dior
+                        </span>
+                    </div>
+
+                    <span class="text-slate-400 tabular-nums">10</span>
+                </button>
+            </li>
+
+            <!-- Fendi -->
+            <li class="group">
+                <button type="button"
+                        class="w-full flex items-center justify-between px-2 py-1 rounded-md text-xs
+                            hover:bg-slate-100">
+
+                    <div class="flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full border border-slate-400 group-focus-within:border-emerald-500 group-focus-within:bg-emerald-500"></span>
+                        <span class="text-slate-600 group-focus-within:font-semibold group-focus-within:text-slate-900 ">
+                            Fendi
+                        </span>
+                    </div>
+
+                    <span class="text-slate-400 tabular-nums">32</span>
+                </button>
+            </li>
+
+            <!-- Gap -->
+            <li class="group">
+                <button type="button"
+                        class="w-full flex items-center justify-between px-2 py-1 rounded-md text-xs
+                            hover:bg-slate-100">
+
+                    <div class="flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full border border-slate-400 group-focus-within:border-emerald-500 group-focus-within:bg-emerald-500"></span>
+                        <span class="text-slate-600 group-focus-within:font-semibold group-focus-within:text-slate-900 ">
+                            Gap
+                        </span>
+                    </div>
+
+                    <span class="text-slate-400 tabular-nums">10</span>
+                </button>
+            </li>
+
+            <!-- Giorgio Armani -->
+            <li class="group">
+                <button type="button"
+                        class="w-full flex items-center justify-between px-2 py-1 rounded-md text-xs
+                            hover:bg-slate-100">
+
+                    <div class="flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full border border-slate-400 group-focus-within:border-emerald-500 group-focus-within:bg-emerald-500"></span>
+                        <span class="text-slate-600 group-focus-within:font-semibold group-focus-within:text-slate-900 ">
+                            Giorgio Armani
+                        </span>
+                    </div>
+
+                    <span class="text-slate-400 tabular-nums">32</span>
+                </button>
+            </li>
+
+            <!-- H&M -->
+            <li class="group">
+                <button type="button"
+                        class="w-full flex items-center justify-between px-2 py-1 rounded-md text-xs
+                            hover:bg-slate-100">
+
+                    <div class="flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full border border-slate-400 group-focus-within:border-emerald-500 group-focus-within:bg-emerald-500"></span>
+                        <span class="text-slate-600 group-focus-within:font-semibold group-focus-within:text-slate-900 ">
+                            H&M
+                        </span>
+                    </div>
+
+                    <span class="text-slate-400 tabular-nums">1</span>
+                </button>
+            </li>
+
+            <!-- Hermès -->
+            <li class="group">
+                <button type="button"
+                        class="w-full flex items-center justify-between px-2 py-1 rounded-md text-xs
+                            hover:bg-slate-100">
+
+                    <div class="flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full border border-slate-400 group-focus-within:border-emerald-500 group-focus-within:bg-emerald-500"></span>
+                        <span class="text-slate-600 group-focus-within:font-semibold group-focus-within:text-slate-900 ">
+                            Hermès
+                        </span>
+                    </div>
+
+                    <span class="text-slate-400 tabular-nums">16</span>
+                </button>
+            </li>
+
+            <!-- Nike -->
+            <li class="group">
+                <button type="button"
+                        class="w-full flex items-center justify-between px-2 py-1 rounded-md text-xs
+                            hover:bg-slate-100">
+
+                    <div class="flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full border border-slate-400 group-focus-within:border-emerald-500 group-focus-within:bg-emerald-500"></span>
+                        <span class="text-slate-600 group-focus-within:font-semibold group-focus-within:text-slate-900 ">
+                            Nike
+                        </span>
+                    </div>
+
+                    <span class="text-slate-400 tabular-nums">8</span>
+                </button>
+            </li>
+
+            <!-- North Face -->
+            <li class="group">
+                <button type="button"
+                        class="w-full flex items-center justify-between px-2 py-1 rounded-md text-xs
+                            hover:bg-slate-100">
+
+                    <div class="flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full border border-slate-400 group-focus-within:border-emerald-500 group-focus-within:bg-emerald-500"></span>
+                        <span class="text-slate-600 group-focus-within:font-semibold group-focus-within:text-slate-900 ">
+                            North Face
+                        </span>
+                    </div>
+
+                    <span class="text-slate-400 tabular-nums">21</span>
+                </button>
+            </li>
+
+            <!-- Reebok -->
+            <li class="group">
+                <button type="button"
+                        class="w-full flex items-center justify-between px-2 py-1 rounded-md text-xs
+                            hover:bg-slate-100">
+
+                    <div class="flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full border border-slate-400 group-focus-within:border-emerald-500 group-focus-within:bg-emerald-500"></span>
+                        <span class="text-slate-600 group-focus-within:font-semibold group-focus-within:text-slate-900 ">
+                            Reebok
+                        </span>
+                    </div>
+
+                    <span class="text-slate-400 tabular-nums">12</span>
+                </button>
+            </li>
+
+            <!-- Supreme -->
+            <li class="group">
+                <button type="button"
+                        class="w-full flex items-center justify-between px-2 py-1 rounded-md text-xs
+                            hover:bg-slate-100">
+
+                    <div class="flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full border border-slate-400 group-focus-within:border-emerald-500 group-focus-within:bg-emerald-500"></span>
+                        <span class="text-slate-600 group-focus-within:font-semibold group-focus-within:text-slate-900 ">
+                            Supreme
+                        </span>
+                    </div>
+
+                    <span class="text-slate-400 tabular-nums">10</span>
+                </button>
+            </li>
+
+            <!-- Versace -->
+            <li class="group">
+                <button type="button"
+                        class="w-full flex items-center justify-between px-2 py-1 rounded-md text-xs
+                            hover:bg-slate-100">
+
+                    <div class="flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full border border-slate-400 group-focus-within:border-emerald-500 group-focus-within:bg-emerald-500"></span>
+                        <span class="text-slate-600 group-focus-within:font-semibold group-focus-within:text-slate-900 ">
+                            Versace
+                        </span>
+                    </div>
+
+                    <span class="text-slate-400 tabular-nums">16</span>
+                </button>
+            </li>
+
+            <!-- Chanel -->
+            <li class="group">
+                <button type="button"
+                        class="w-full flex items-center justify-between px-2 py-1 rounded-md text-xs
+                            hover:bg-slate-100">
+
+                    <div class="flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full border border-slate-400 group-focus-within:border-emerald-500 group-focus-within:bg-emerald-500"></span>
+                        <span class="text-slate-600 group-focus-within:font-semibold group-focus-within:text-slate-900 ">
+                            Chanel
+                        </span>
+                    </div>
+
+                    <span class="text-slate-400 tabular-nums">18</span>
+                </button>
+            </li>
+
+            <!-- Chanel -->
+            <li class="group">
+                <button type="button"
+                        class="w-full flex items-center justify-between px-2 py-1 rounded-md text-xs
+                            hover:bg-slate-100">
+
+                    <div class="flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full border border-slate-400 group-focus-within:border-emerald-500 group-focus-within:bg-emerald-500"></span>
+                        <span class="text-slate-600 group-focus-within:font-semibold group-focus-within:text-slate-900 ">
+                            Chanel
+                        </span>
+                    </div>
+
+                    <span class="text-slate-400 tabular-nums">18</span>
+                </button>
+            </li>
+
+            <!-- Chanel -->
+            <li class="group">
+                <button type="button"
+                        class="w-full flex items-center justify-between px-2 py-1 rounded-md text-xs
+                            hover:bg-slate-100">
+
+                    <div class="flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full border border-slate-400 group-focus-within:border-emerald-500 group-focus-within:bg-emerald-500"></span>
+                        <span class="text-slate-600 group-focus-within:font-semibold group-focus-within:text-slate-900 ">
+                            Chanel
+                        </span>
+                    </div>
+
+                    <span class="text-slate-400 tabular-nums">18</span>
+                </button>
+            </li>
+
+        </ul>
+    </div>
+
+    <!-- 字體列表 -->
+    <div class="flex flex-col h-full">
+        <!-- Table Header Search Bar -->
+        <div class="p-6 flex items-center justify-between border-b border-slate-200">
+            <!-- Search Input -->
+            <div class="flex items-center space-x-1.5">
+                <div class="min-w-100 max-w-130">
+                    <input
+                        class="w-full bg-white border border-slate-200 rounded-md text-sm px-3 py-2.5"
+                        placeholder="請輸入字體名稱"
+                        type="text" />
+                </div>
+                <!-- Search button -->
+                <button class="p-3 border border-slate-200 rounded-md bg-white text-slate-900">
+                    <div class="w-4 h-4">
+                        <SearchIcon />
+                    </div>
+                </button>
+            </div>
+
+            <!-- 新增字體 -->
+            <button class="px-6 py-2 border border-slate-900 bg-slate-900 rounded-md text-slate-900 flex items-center text-sm font-medium transition-colors gap-2 shrink-0">
+                <div class="w-6 h-6 [--icon-stroke:1.25] text-white">
+                    <FileTypeIcon />
+                </div>
+                <p class="min-w-0 flex-1 text-white text-left">
+                    新增字體
+                </p>
+            </button>
+            
+        </div>
+
+        <!-- table body (list) -->
+        <div class="flex-1 overflow-auto">
+            <table class="w-full text-left border-collapse ">
+                <colgroup>
+                    <col class="w-[360px]" />   <!-- 字體名稱 -->
+                    <col class="w-[240px]" />   <!-- 廠商 -->
+                    <col class="w-[312px]" />   <!-- 上傳時間 -->
+                    <col class="w-[180px]" />   <!-- 動作 -->
+                </colgroup>
+
+                <thead>
+                    <tr class="bg-white text-xs font-medium text-slate-500 uppercase tracking-wider sticky top-0 shadow-sm">
+                        <th class="p-3">字體名稱</th>
+                        <th class="p-3">廠商</th>
+                        <th class="p-3">上傳時間</th>
+                        <th class="p-3">動作</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr class="border-b border-slate-200 hover:bg-slate-50 transition-colors text-sm font-medium text-slate-800">
+                        <td class="px-3 py-4 truncate">
+                            <div class="flex items-center gap-3">
+                                <span class="px-2.5 py-0.5 bg-gray-200 text-xs text-gray-600 font-semibold rounded-full">GF</span>
+                                <span class="">Arial</span>
+                            </div>
+                        </td>
+                        <td class="px-3 py-4">--</td>
+                        <td class="px-3 py-4">2024-08-04 09:18:03</td>
+                        <td class="px-3">
+                            <button class="p-1 hover:bg-slate-100 rounded-md text-slate-900">
+                                <div class="w-6 h-6 [--icon-stroke:1]">
+                                    <EyeIcon />
+                                </div>
+                            </button>
+                        </td>
+                    </tr>
+
+                    <tr class="border-b border-slate-200 hover:bg-slate-50 transition-colors text-sm font-medium text-slate-800">
+                        <td class="px-3 py-4 truncate">
+                            <div class="flex items-center gap-3">
+                                <span class="px-2.5 py-0.5 bg-gray-200 text-xs text-gray-600 font-semibold rounded-full">GF</span>
+                                <span class="">Arial</span>
+                            </div>
+                        </td>
+                        <td class="px-3 py-4">--</td>
+                        <td class="px-3 py-4">2024-08-04 09:18:03</td>
+                        <td class="px-3">
+                            <button class="p-1 hover:bg-slate-100 rounded-md text-slate-900">
+                                <div class="w-6 h-6 [--icon-stroke:1]">
+                                    <EyeIcon />
+                                </div>
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- table footer -->
+        <div class="px-6 py-3 border-t border-slate-200 flex items-center justify-between text-sm font-medium text-slate-800">
+            <p class="text-slate-500">
+            1 of 100 row(s) selected.
+            </p>
+            <!-- table footer pagination -->
+            <div class="flex items-center space-x-8">
+                <div class="flex items-center space-x-2">
+                    <span>Rows per page</span>
+                    <select class="py-1 pl-2 pr-8 bg-white border border-slate-200 rounded text-sm focus:ring-1 focus:ring-primary outline-none">
+                    <option>10</option>
+                    <option>25</option>
+                    <option>50</option>
+                    </select>
+                </div>
+                <span>Page 1 of 10</span>
+                <div class="flex items-center space-x-2">
+                    <button class="p-2 border border-slate-200 rounded-md bg-white text-slate-900">
+                        <div class="w-4 h-4">
+                            <ChevronsLeftIcon />
+                        </div>
+                    </button>
+                    <button class="p-2 border border-slate-200 rounded-md bg-white text-slate-900">
+                        <div class="w-4 h-4">
+                            <ChevronLeftIcon />
+                        </div>
+                    </button>
+                    <button class="p-2 border border-slate-200 rounded-md bg-white text-slate-900">
+                        <div class="w-4 h-4">
+                            <ChevronRightIcon />
+                        </div>
+                    </button>
+                    <button class="p-2 border border-slate-200 rounded-md bg-white text-slate-900">
+                        <div class="w-4 h-4">
+                            <ChevronsRightIcon />
+                        </div>
+                    </button>
+                
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
